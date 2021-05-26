@@ -1,0 +1,29 @@
+{
+    "name": "foxlang",
+    "displayName": "fox",
+    "description": "Fox Programming Language",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "fox",
+                "aliases": ["Fox", "fox"],
+                "extensions": [".fox"],
+                "configuration": "./language/configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "fox",
+                "scopeName": "source.fox",
+                "path": "./language/syntax.json"
+            }
+        ]
+    }
+}
