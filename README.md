@@ -1,2 +1,3 @@
-# foxlang
+# Fox
+
 Fox Programming Language
