@@ -67,13 +67,10 @@
 					"name": "punctuation.definition.string.begin.fox"
 				}
 			},
-			"end": "(\")|((?:[^\\\\\\n])$)",
+			"end": "\"",
 			"endCaptures": {
-				"1": {
+				"0": {
 					"name": "punctuation.definition.string.end.fox"
-				},
-				"2": {
-					"name": "invalid.illegal.newline.fox"
 				}
 			},
 			"patterns": [
@@ -90,13 +87,10 @@
 					"name": "punctuation.definition.char.begin.fox"
 				}
 			},
-			"end": "(\\')|((?:[^\\\\\\n])$)",
+			"end": "'",
 			"endCaptures": {
-				"1": {
+				"0": {
 					"name": "punctuation.definition.char.end.fox"
-				},
-				"2": {
-					"name": "invalid.illegal.newline.fox"
 				}
 			},
 			"patterns": [
