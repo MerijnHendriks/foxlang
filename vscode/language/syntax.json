@@ -7,6 +7,10 @@
 	],
 	"patterns": [],
 	"repository": {
+		"null-literal": {
+			"name": "constant.language.null.fox",
+			"match": "(?<!\\.)\\bnull\\b"
+		},
 		"boolean-literal-true": {
 			"patterns": [
 				{
@@ -23,35 +27,27 @@
 				}
 			]
 		},
-		"null-literal": {
-			"name": "constant.language.null.fox",
-			"match": "(?<!\\.)\\bnull\\b"
-		},
 		"numeric-literal-hex": {
 			"patterns": [
 				{
 					"name": "constant.numeric.hex.fox",
-					"match": "\\b0(x)[0-9a-f_]+(u|l|ul)?\\b"
+					"match": "\\b0(x)[0-9a-f]?\\b"
 				}
 			]
 		},
-		"numeric-literal-decimal": {
+		"numeric-literal-float": {
 			"patterns": [
 				{
-					"name": "constant.numeric.decimal.fox",
-					"match": "\\b([0-9_]+)?\\.[0-9_]+((e)[0-9]+)?(f)?\\b"
-				},
+					"name": "constant.numeric.float.fox",
+					"match": "\\b([0-9]+)?\\.[0-9]+((e)[0-9])?\\b"
+				}
+			]
+		},
+		"numeric-literal-integer": {
+			"patterns": [
 				{
-					"name": "constant.numeric.decimal.fox",
-					"match": "\\b[0-9_]+(e)[0-9_]+(f)?\\b"
-				},
-				{
-					"name": "constant.numeric.decimal.fox",
-					"match": "\\b[0-9_]+(f)\\b"
-				},
-				{
-					"name": "constant.numeric.decimal.fox",
-					"match": "\\b[0-9_]+(u|l|ul)?\\b"
+					"name": "constant.numeric.integer.fox",
+					"match": "\b([0-9](?!\\.))+((e)[0-9])?\b"
 				}
 			]
 		},
@@ -109,6 +105,16 @@
 				}
 			]
 		},
+		"numeric-literal-decimal": {
+			"patterns": [
+				{
+					"include": "#numeric-literal-float"
+				},
+				{
+					"include": "#numeric-literal-integer"
+				}
+			]
+		},
 		"numeric-literal": {
 			"patterns": [
 				{
@@ -119,13 +125,13 @@
 				}
 			]
 		},
-		"literal": {
+		"literals": {
 			"patterns": [
 				{
-					"include": "#boolean-literal"
+					"include": "#null-literal"
 				},
 				{
-					"include": "#null-literal"
+					"include": "#boolean-literal"
 				},
 				{
 					"include": "#numeric-literal"
@@ -137,6 +143,12 @@
 					"include": "#char-literal"
 				}
 			]
+		},
+		"keywords": {
+			"patterns": []
+		},
+		"operators": {
+			"patterns": []
 		}
 	}
 }
