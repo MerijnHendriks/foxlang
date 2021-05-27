@@ -285,6 +285,10 @@
 				}
 			]
 		},
+		"null-coalescing-operator": {
+			"name": "keyword.operator.null-coalescing.fox",
+			"match": "\\?\\?"
+		},
 		"operators": {
 			"patterns": [
 				{
@@ -388,6 +392,9 @@
 				},
 				{
 					"include": "#conditional-operator"
+				},
+				{
+					"include": "#null-coalescing-operator"
 				}
 			]
 		},
