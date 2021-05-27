@@ -24,6 +24,64 @@
 			"name": "identifier.fox",
 			"match": "[[:alpha:]][[:alnum:]]*"
 		},
+		"punctuation-accessor": {
+			"name": "punctuation.accessor.fox",
+			"match": "\\."
+		},
+		"punctuation-comma": {
+			"name": "punctuation.separator.comma.fox",
+			"match": ","
+		},
+		"punctuation-semicolon": {
+			"name": "punctuation.terminator.statement.fox",
+			"match": ";"
+		},
+		"comment-block": {
+			"name": "comment.block.fox",
+			"begin": "/\\*",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.fox"
+				}
+			},
+			"end": "\\*/",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.fox"
+				}
+			}
+		},
+		"comment-single": {
+			"begin": "(^[ \\t]+)?(?=//)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.comment.leading.fox"
+				}
+			},
+			"end": "(?=$)",
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.fox",
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.fox"
+						}
+					},
+					"end": "(?=$)"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"include": "#comment-block"
+				},
+				{
+					"include": "#comment-single"
+				}
+			]
+		},
 		"null-literal": {
 			"name": "constant.language.null.fox",
 			"match": "(?<!\\.)\\b(null)\\b"
@@ -509,52 +567,6 @@
 		},
 		"keywords": {
 			"patterns": []
-		},
-		"comment-block": {
-			"name": "comment.block.fox",
-			"begin": "/\\*",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.comment.fox"
-				}
-			},
-			"end": "\\*/",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.comment.fox"
-				}
-			}
-		},
-		"comment-single": {
-			"begin": "(^[ \\t]+)?(?=//)",
-			"beginCaptures": {
-				"1": {
-					"name": "punctuation.whitespace.comment.leading.fox"
-				}
-			},
-			"end": "(?=$)",
-			"patterns": [
-				{
-					"name": "comment.line.double-slash.fox",
-					"begin": "//",
-					"beginCaptures": {
-						"0": {
-							"name": "punctuation.definition.comment.fox"
-						}
-					},
-					"end": "(?=$)"
-				}
-			]
-		},
-		"comments": {
-			"patterns": [
-				{
-					"include": "#comment-block"
-				},
-				{
-					"include": "#comment-single"
-				}
-			]
 		}
 	}
 }
