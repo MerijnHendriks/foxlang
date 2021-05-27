@@ -26,15 +26,15 @@
 		},
 		"null-literal": {
 			"name": "constant.language.null.fox",
-			"match": "(?<!\\.)\\bnull\\b"
+			"match": "(?<!\\.)\\b(null)\\b"
 		},
 		"boolean-literal-true": {
 			"name": "constant.language.boolean.true.fox",
-			"match": "(?<!\\.)\\btrue\\b"
+			"match": "(?<!\\.)\\b(true)\\b"
 		},
 		"boolean-literal-false": {
 			"name": "constant.language.boolean.false.fox",
-			"match": "(?<!\\.)\\bfalse\\b"
+			"match": "(?<!\\.)\\b(false)\\b"
 		},
 		"numeric-literal-hex": {
 			"name": "constant.numeric.hex.fox",
@@ -285,10 +285,6 @@
 				}
 			]
 		},
-		"null-coalescing-operator": {
-			"name": "keyword.operator.null-coalescing.fox",
-			"match": "\\?\\?"
-		},
 		"operators": {
 			"patterns": [
 				{
@@ -392,14 +388,173 @@
 				},
 				{
 					"include": "#conditional-operator"
+				}
+			]
+		},
+		"void-type": {
+			"name": "keyword.type.void",
+			"match": "(?<!\\.)\\b(void)\\b"
+		},
+		"bool-type": {
+			"name": "keyword.type.bool",
+			"match": "(?<!\\.)\\b(bool)\\b"
+		},
+		"sbyte-type": {
+			"name": "keyword.type.bool",
+			"match": "(?<!\\.)\\b(sbyte)\\b"
+		},
+		"short-type": {
+			"name": "keyword.type.bool",
+			"match": "(?<!\\.)\\b(bool)\\b"
+		},
+		"int-type": {
+			"name": "keyword.type.bool",
+			"match": "(?<!\\.)\\b(int)\\b"
+		},
+		"long-type": {
+			"name": "keyword.type.long",
+			"match": "(?<!\\.)\\b(long)\\b"
+		},
+		"byte-type": {
+			"name": "keyword.type.byte",
+			"match": "(?<!\\.)\\b(byte)\\b"
+		},
+		"ushort-type": {
+			"name": "keyword.type.ushort",
+			"match": "(?<!\\.)\\b(ushort)\\b"
+		},
+		"uint-type": {
+			"name": "keyword.type.uint",
+			"match": "(?<!\\.)\\b(uint)\\b"
+		},
+		"ulong-type": {
+			"name": "keyword.type.ulong",
+			"match": "(?<!\\.)\\b(ulong)\\b"
+		},
+		"float-type": {
+			"name": "keyword.type.float",
+			"match": "(?<!\\.)\\b(float)\\b"
+		},
+		"double-type": {
+			"name": "keyword.type.double",
+			"match": "(?<!\\.)\\b(double)\\b"
+		},
+		"char-type": {
+			"name": "keyword.type.char",
+			"match": "(?<!\\.)\\b(char)\\b"
+		},
+		"string-type": {
+			"name": "keyword.type.string",
+			"match": "(?<!\\.)\\b(string)\\b"
+		},
+		"func-type": {
+			"name": "keyword.type.func",
+			"match": "(?<!\\.)\\b(func)\\b"
+		},
+		"type-builtin": {
+			"patterns": [
+				{
+					"include": "#void-type"
 				},
 				{
-					"include": "#null-coalescing-operator"
+					"include": "#bool-type"
+				},
+				{
+					"include": "#sbyte-type"
+				},
+				{
+					"include": "#short-type"
+				},
+				{
+					"include": "#int-type"
+				},
+				{
+					"include": "#long-type"
+				},
+				{
+					"include": "#byte-type"
+				},
+				{
+					"include": "#ushort-type"
+				},
+				{
+					"include": "#uint-type"
+				},
+				{
+					"include": "#ulong-type"
+				},
+				{
+					"include": "#float-type"
+				},
+				{
+					"include": "#double-type"
+				},
+				{
+					"include": "#char-type"
+				},
+				{
+					"include": "#string-type"
+				},
+				{
+					"include": "#func-type"
+				}
+			]
+		},
+		"types": {
+			"patterns": [
+				{
+					"include": "#type-buildin"
 				}
 			]
 		},
 		"keywords": {
 			"patterns": []
+		},
+		"comment-block": {
+			"name": "comment.block.fox",
+			"begin": "/\\*",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.fox"
+				}
+			},
+			"end": "\\*/",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.comment.fox"
+				}
+			}
+		},
+		"comment-single": {
+			"begin": "(^[ \\t]+)?(?=//)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.whitespace.comment.leading.fox"
+				}
+			},
+			"end": "(?=$)",
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.fox",
+					"begin": "//",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.fox"
+						}
+					},
+					"end": "(?=$)"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"include": "#comment-block"
+				},
+				{
+					"include": "#comment-single"
+				}
+			]
 		}
 	}
 }
