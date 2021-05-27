@@ -5,51 +5,48 @@
 	"fileTypes": [
 		"fox"
 	],
-	"patterns": [],
+	"patterns": [
+		{
+			"include": "#identifier"
+		},
+		{
+			"include": "#literals"
+		},
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
 	"repository": {
+		"identifier": {
+			"name": "identifier.fox",
+			"match": "[[:alpha:]][[:alnum:]]*"
+		},
 		"null-literal": {
 			"name": "constant.language.null.fox",
 			"match": "(?<!\\.)\\bnull\\b"
 		},
 		"boolean-literal-true": {
-			"patterns": [
-				{
-					"name": "constant.language.boolean.true.fox",
-					"match": "(?<!\\.)\\btrue\\b"
-				}
-			]
+			"name": "constant.language.boolean.true.fox",
+			"match": "(?<!\\.)\\btrue\\b"
 		},
 		"boolean-literal-false": {
-			"patterns": [
-				{
-					"name": "constant.language.boolean.false.fox",
-					"match": "(?<!\\.)\\bfalse\\b"
-				}
-			]
+			"name": "constant.language.boolean.false.fox",
+			"match": "(?<!\\.)\\bfalse\\b"
 		},
 		"numeric-literal-hex": {
-			"patterns": [
-				{
-					"name": "constant.numeric.hex.fox",
-					"match": "\\b0(x)[0-9a-f]?\\b"
-				}
-			]
+			"name": "constant.numeric.hex.fox",
+			"match": "\\b0(x)[0-9a-f]?\\b"
 		},
 		"numeric-literal-float": {
-			"patterns": [
-				{
-					"name": "constant.numeric.float.fox",
-					"match": "\\b([0-9]+)?\\.[0-9]+((e)[0-9])?\\b"
-				}
-			]
+			"name": "constant.numeric.float.fox",
+			"match": "\\b([0-9]+)?\\.[0-9]+((e)[0-9])?\\b"
 		},
 		"numeric-literal-integer": {
-			"patterns": [
-				{
-					"name": "constant.numeric.integer.fox",
-					"match": "(?<!\\.)\\b([0-9](?!\\.))+((e)[0-9])?\\b"
-				}
-			]
+			"name": "constant.numeric.integer.fox",
+			"match": "(?<!\\.)\\b([0-9](?!\\.))+((e)[0-9])?\\b"
 		},
 		"string-character-escape": {
 			"name": "constant.character.escape.fox",
@@ -105,23 +102,16 @@
 				}
 			]
 		},
-		"numeric-literal-decimal": {
-			"patterns": [
-				{
-					"include": "#numeric-literal-float"
-				},
-				{
-					"include": "#numeric-literal-integer"
-				}
-			]
-		},
 		"numeric-literal": {
 			"patterns": [
 				{
 					"include": "#numeric-literal-hex"
 				},
 				{
-					"include": "#numeric-literal-decimal"
+					"include": "#numeric-literal-float"
+				},
+				{
+					"include": "#numeric-literal-integer"
 				}
 			]
 		},
@@ -145,268 +135,136 @@
 			]
 		},
 		"add-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.add.fox",
-					"match": "\\+"
-				}
-			]
+			"name": "keyword.operator.add.fox",
+			"match": "\\+"
 		},
 		"substract-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.substract.fox",
-					"match": "-"
-				}
-			]
+			"name": "keyword.operator.substract.fox",
+			"match": "-"
 		},
 		"multiply-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.multiply.fox",
-					"match": "\\*"
-				}
-			]
+			"name": "keyword.operator.multiply.fox",
+			"match": "\\*"
 		},
 		"divide-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.divide.fox",
-					"match": "/"
-				}
-			]
+			"name": "keyword.operator.divide.fox",
+			"match": "/"
 		},
 		"modulo-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.modulo.fox",
-					"match": "%"
-				}
-			]
+			"name": "keyword.operator.modulo.fox",
+			"match": "%"
 		},
 		"increment-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.increment.fox",
-					"match": "\\+\\+"
-				}
-			]
+			"name": "keyword.operator.increment.fox",
+			"match": "\\+\\+"
 		},
 		"decrement-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.decrement.fox",
-					"match": "--"
-				}
-			]
+			"name": "keyword.operator.decrement.fox",
+			"match": "--"
 		},
 		"equals-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.equals.fox",
-					"match": "=="
-				}
-			]
+			"name": "keyword.operator.equals.fox",
+			"match": "=="
 		},
 		"notequals-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.notequals.fox",
-					"match": "!="
-				}
-			]
+			"name": "keyword.operator.notequals.fox",
+			"match": "!="
 		},
 		"greaterthan-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.greaterthan.fox",
-					"match": ">"
-				}
-			]
+			"name": "keyword.operator.greaterthan.fox",
+			"match": ">"
 		},
 		"lessthan-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.lessthan.fox",
-					"match": "<"
-				}
-			]
+			"name": "keyword.operator.lessthan.fox",
+			"match": "<"
 		},
 		"greaterequals-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.greaterequals.fox",
-					"match": ">="
-				}
-			]
+			"name": "keyword.operator.greaterequals.fox",
+			"match": ">="
 		},
 		"lessequals-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.lessequals.fox",
-					"match": "<="
-				}
-			]
+			"name": "keyword.operator.lessequals.fox",
+			"match": "<="
 		},
 		"not-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.not.fox",
-					"match": "!"
-				}
-			]
+			"name": "keyword.operator.not.fox",
+			"match": "!"
 		},
 		"and-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.and.fox",
-					"match": "&&"
-				}
-			]
+			"name": "keyword.operator.and.fox",
+			"match": "&&"
 		},
 		"or-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.or.fox",
-					"match": "\\|\\|"
-				}
-			]
+			"name": "keyword.operator.or.fox",
+			"match": "\\|\\|"
 		},
 		"bitwise-not-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.not.fox",
-					"match": "~"
-				}
-			]
+			"name": "keyword.operator.bitwise.not.fox",
+			"match": "~"
 		},
 		"bitwise-and-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.and.fox",
-					"match": "\\&"
-				}
-			]
+			"name": "keyword.operator.bitwise.and.fox",
+			"match": "\\&"
 		},
 		"bitwise-or-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.or.fox",
-					"match": "\\|"
-				}
-			]
+			"name": "keyword.operator.bitwise.or.fox",
+			"match": "\\|"
 		},
 		"bitwise-xor-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.xor.fox",
-					"match": "\\^"
-				}
-			]
+			"name": "keyword.operator.bitwise.xor.fox",
+			"match": "\\^"
 		},
 		"bitwise-left-shift-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.shift.left.fox",
-					"match": "<<"
-				}
-			]
+			"name": "keyword.operator.bitwise.shift.left.fox",
+			"match": "<<"
 		},
 		"bitwise-right-shift-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.bitwise.shift.right.fox",
-					"match": ">>"
-				}
-			]
+			"name": "keyword.operator.bitwise.shift.right.fox",
+			"match": ">>"
 		},
 		"assign-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.fox",
-					"match": "\\="
-				}
-			]
+			"name": "keyword.operator.assign.fox",
+			"match": "\\="
 		},
 		"assign-add-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.add.fox",
-					"match": "\\+="
-				}
-			]
+			"name": "keyword.operator.assign.add.fox",
+			"match": "\\+="
 		},
 		"assign-substract-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.substract.fox",
-					"match": "-="
-				}
-			]
+			"name": "keyword.operator.assign.substract.fox",
+			"match": "-="
 		},
 		"assign-multiply-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.multiply.fox",
-					"match": "\\*="
-				}
-			]
+			"name": "keyword.operator.assign.multiply.fox",
+			"match": "\\*="
 		},
 		"assign-divide-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.divide.fox",
-					"match": "/="
-				}
-			]
+			"name": "keyword.operator.assign.divide.fox",
+			"match": "/="
 		},
 		"assign-modulo-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.modulo.fox",
-					"match": "%="
-				}
-			]
+			"name": "keyword.operator.assign.modulo.fox",
+			"match": "%="
 		},
 		"assign-bitwise-and-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.bitwise.and.fox",
-					"match": "\\&="
-				}
-			]
+			"name": "keyword.operator.assign.bitwise.and.fox",
+			"match": "\\&="
 		},
 		"assign-bitwise-or-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.bitwise.or.fox",
-					"match": "\\|="
-				}
-			]
+			"name": "keyword.operator.assign.bitwise.or.fox",
+			"match": "\\|="
 		},
 		"assign-bitwise-xor-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.bitwise.xor.fox",
-					"match": "\\^="
-				}
-			]
+			"name": "keyword.operator.assign.bitwise.xor.fox",
+			"match": "\\^="
 		},
 		"assign-bitwise-left-shift-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.bitwise.shift.leftfox",
-					"match": "<<="
-				}
-			]
+			"name": "keyword.operator.assign.bitwise.shift.leftfox",
+			"match": "<<="
 		},
 		"assign-bitwise-right-shift-operator": {
-			"patterns": [
-				{
-					"name": "keyword.operator.assign.bitwise.shift.rightfox",
-					"match": ">>="
-				}
-			]
+			"name": "keyword.operator.assign.bitwise.shift.rightfox",
+			"match": ">>="
 		},
 		"conditional-operator": {
 			"begin": "(?<!\\?)\\?(?!\\?|\\.|\\[)",
