@@ -328,15 +328,83 @@
 				}
 			]
 		},
-		"expression-operators": {
+		"assign-add-operator": {
 			"patterns": [
 				{
-					"name": "keyword.operator.assignment.compound.fox",
-					"match": "\\*=|/=|%=|\\+=|-="
-				},
+					"name": "keyword.operator.assign.add.fox",
+					"match": "\\+="
+				}
+			]
+		},
+		"assign-substract-operator": {
+			"patterns": [
 				{
-					"name": "keyword.operator.assignment.compound.bitwise.fox",
-					"match": "\\&=|\\^=|<<=|>>=|\\|="
+					"name": "keyword.operator.assign.substract.fox",
+					"match": "-="
+				}
+			]
+		},
+		"assign-multiply-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.multiply.fox",
+					"match": "\\*="
+				}
+			]
+		},
+		"assign-divide-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.divide.fox",
+					"match": "/="
+				}
+			]
+		},
+		"assign-modulo-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.modulo.fox",
+					"match": "%="
+				}
+			]
+		},
+		"assign-bitwise-and-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.bitwise.and.fox",
+					"match": "\\&="
+				}
+			]
+		},
+		"assign-bitwise-or-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.bitwise.or.fox",
+					"match": "\\|="
+				}
+			]
+		},
+		"assign-bitwise-xor-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.bitwise.xor.fox",
+					"match": "\\^="
+				}
+			]
+		},
+		"assign-bitwise-left-shift-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.bitwise.shift.leftfox",
+					"match": "<<="
+				}
+			]
+		},
+		"assign-bitwise-right-shift-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.bitwise.shift.rightfox",
+					"match": ">>="
 				}
 			]
 		},
@@ -429,6 +497,36 @@
 				},
 				{
 					"include": "#assign-operator"
+				},
+				{
+					"include": "#assign-add-operator"
+				},
+				{
+					"include": "#assign-substract-operator"
+				},
+				{
+					"include": "#assign-multiply-operator"
+				},
+				{
+					"include": "#assign-divide-operator"
+				},
+				{
+					"include": "#assign-modulo-operator"
+				},
+				{
+					"include": "#assign-bitwise-and-operator"
+				},
+				{
+					"include": "#assign-bitwise-or-operator"
+				},
+				{
+					"include": "#assign-bitwise-xor-operator"
+				},
+				{
+					"include": "#assign-bitwise-left-shift-operator"
+				},
+				{
+					"include": "#assign-bitwise-right-shift-operator"
 				},
 				{
 					"include": "#conditional-operator"
