@@ -47,7 +47,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric.integer.fox",
-					"match": "(?<!\\.)\b([0-9](?!\\.))+((e)[0-9])?\b"
+					"match": "(?<!\\.)\\b([0-9](?!\\.))+((e)[0-9])?\\b"
 				}
 			]
 		},
