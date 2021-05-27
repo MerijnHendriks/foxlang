@@ -272,6 +272,62 @@
 				}
 			]
 		},
+		"bitwise-not-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.not.fox",
+					"match": "~"
+				}
+			]
+		},
+		"bitwise-and-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.and.fox",
+					"match": "\\&"
+				}
+			]
+		},
+		"bitwise-or-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.or.fox",
+					"match": "\\|"
+				}
+			]
+		},
+		"bitwise-xor-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.xor.fox",
+					"match": "\\^"
+				}
+			]
+		},
+		"bitwise-left-shift-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.shift.left.fox",
+					"match": "<<"
+				}
+			]
+		},
+		"bitwise-right-shift-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.bitwise.shift.right.fox",
+					"match": ">>"
+				}
+			]
+		},
+		"assign-operator": {
+			"patterns": [
+				{
+					"name": "keyword.operator.assign.fox",
+					"match": "\\="
+				}
+			]
+		},
 		"expression-operators": {
 			"patterns": [
 				{
@@ -281,18 +337,6 @@
 				{
 					"name": "keyword.operator.assignment.compound.bitwise.fox",
 					"match": "\\&=|\\^=|<<=|>>=|\\|="
-				},
-				{
-					"name": "keyword.operator.bitwise.shift.fox",
-					"match": "<<|>>"
-				},
-				{
-					"name": "keyword.operator.bitwise.fox",
-					"match": "\\&|~|\\^|\\|"
-				},
-				{
-					"name": "keyword.operator.assignment.fox",
-					"match": "\\="
 				}
 			]
 		},
@@ -364,6 +408,27 @@
 				},
 				{
 					"include": "#or-operator"
+				},
+				{
+					"include": "#bitwise-not-operator"
+				},
+				{
+					"include": "#bitwise-and-operator"
+				},
+				{
+					"include": "#bitwise-or-operator"
+				},
+				{
+					"include": "#bitwise-xor-operator"
+				},
+				{
+					"include": "#bitwise-left-shift-operator"
+				},
+				{
+					"include": "#bitwise-right-shift-operator"
+				},
+				{
+					"include": "#assign-operator"
 				},
 				{
 					"include": "#conditional-operator"
