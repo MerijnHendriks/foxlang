@@ -133,9 +133,6 @@
 		"statement": {
 			"patterns": [
 				{
-					"include": "#preprocessor"
-				},
-				{
 					"include": "#comment"
 				},
 				{
