@@ -1,8 +1,8 @@
 {
-	"name": "C#",
-	"scopeName": "source.cs",
+	"name": "Fox",
+	"scopeName": "source.fox",
 	"fileTypes": [
-		"cs"
+		"fox"
 	],
 	"patterns": [
 		{
@@ -241,7 +241,7 @@
             "begin": "\\b(using)\\s*",
             "beginCaptures": {
                 "1": {
-                    "name": "keyword.other.using.cs"
+                    "name": "keyword.other.using.fox"
                 }
             },
             "end": "(?=;)",
@@ -250,7 +250,7 @@
                     "include": "#comment"
                 },
                 {
-                    "name": "entity.name.type.namespace.cs",
+                    "name": "entity.name.type.namespace.fox",
                     "match": "[_[:alpha:]][_[:alnum:]]*"
                 },
                 {
@@ -262,7 +262,7 @@
 			"begin": "\\b(namespace)\\s+",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.namespace.cs"
+					"name": "keyword.other.namespace.fox"
 				}
 			},
 			"end": "(?<=\\})",
@@ -271,7 +271,7 @@
 					"include": "#comment"
 				},
 				{
-					"name": "entity.name.type.namespace.cs",
+					"name": "entity.name.type.namespace.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				},
 				{
@@ -281,13 +281,13 @@
 					"begin": "\\{",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.open.cs"
+							"name": "punctuation.curlybrace.open.fox"
 						}
 					},
 					"end": "\\}",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.close.cs"
+							"name": "punctuation.curlybrace.close.fox"
 						}
 					},
 					"patterns": [
@@ -305,7 +305,7 @@
 			]
 		},
 		"storage-modifier": {
-			"name": "storage.modifier.cs",
+			"name": "storage.modifier.fox",
 			"match": "(?<!\\.)\\b(new|delete|static|const)\\b"
 		},
 		"class-declaration": {
@@ -316,10 +316,10 @@
 					"begin": "(?x)\n\\b(class)\\b\\s+\n([_[:alpha:]][_[:alnum:]]*)\\s*",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.other.class.cs"
+							"name": "keyword.other.class.fox"
 						},
 						"2": {
-							"name": "entity.name.type.class.cs"
+							"name": "entity.name.type.class.fox"
 						}
 					},
 					"end": "(?=\\{)",
@@ -342,13 +342,13 @@
 					"begin": "\\{",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.open.cs"
+							"name": "punctuation.curlybrace.open.fox"
 						}
 					},
 					"end": "\\}",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.close.cs"
+							"name": "punctuation.curlybrace.close.fox"
 						}
 					},
 					"patterns": [
@@ -377,10 +377,10 @@
 							"match": "(enum)\\s+([_[:alpha:]][_[:alnum:]]*)",
 							"captures": {
 								"1": {
-									"name": "keyword.other.enum.cs"
+									"name": "keyword.other.enum.fox"
 								},
 								"2": {
-									"name": "entity.name.type.enum.cs"
+									"name": "entity.name.type.enum.fox"
 								}
 							}
 						},
@@ -388,7 +388,7 @@
 							"begin": ":",
 							"beginCaptures": {
 								"0": {
-									"name": "punctuation.separator.colon.cs"
+									"name": "punctuation.separator.colon.fox"
 								}
 							},
 							"end": "(?=\\{)",
@@ -404,13 +404,13 @@
 					"begin": "\\{",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.open.cs"
+							"name": "punctuation.curlybrace.open.fox"
 						}
 					},
 					"end": "\\}",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.close.cs"
+							"name": "punctuation.curlybrace.close.fox"
 						}
 					},
 					"patterns": [
@@ -424,7 +424,7 @@
 							"begin": "[_[:alpha:]][_[:alnum:]]*",
 							"beginCaptures": {
 								"0": {
-									"name": "entity.name.variable.enum-member.cs"
+									"name": "entity.name.variable.enum-member.fox"
 								}
 							},
 							"end": "(?=(,|\\}))",
@@ -452,10 +452,10 @@
 					"begin": "(?x)\n(interface)\\b\\s+\n([_[:alpha:]][_[:alnum:]]*)",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.other.interface.cs"
+							"name": "keyword.other.interface.fox"
 						},
 						"2": {
-							"name": "entity.name.type.interface.cs"
+							"name": "entity.name.type.interface.fox"
 						}
 					},
 					"end": "(?=\\{)",
@@ -478,13 +478,13 @@
 					"begin": "\\{",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.open.cs"
+							"name": "punctuation.curlybrace.open.fox"
 						}
 					},
 					"end": "\\}",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.close.cs"
+							"name": "punctuation.curlybrace.close.fox"
 						}
 					},
 					"patterns": [
@@ -502,13 +502,13 @@
 			"begin": "\\<",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.typeparameters.begin.cs"
+					"name": "punctuation.definition.typeparameters.begin.fox"
 				}
 			},
 			"end": "\\>",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.definition.typeparameters.end.cs"
+					"name": "punctuation.definition.typeparameters.end.fox"
 				}
 			},
 			"patterns": [
@@ -516,7 +516,7 @@
 					"match": "\\b(in|out)\\b",
 					"captures": {
 						"1": {
-							"name": "storage.modifier.cs"
+							"name": "storage.modifier.fox"
 						}
 					}
 				},
@@ -524,7 +524,7 @@
 					"match": "\\b([_[:alpha:]][_[:alnum:]]*)\\b",
 					"captures": {
 						"1": {
-							"name": "entity.name.type.type-parameter.cs"
+							"name": "entity.name.type.type-parameter.fox"
 						}
 					}
 				},
@@ -540,7 +540,7 @@
 			"begin": ":",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.separator.colon.cs"
+					"name": "punctuation.separator.colon.fox"
 				}
 			},
 			"end": "(?=\\{|where)",
@@ -557,19 +557,19 @@
 			"begin": "(where)\\s+([_[:alpha:]][_[:alnum:]]*)\\s*(:)",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.where.cs"
+					"name": "keyword.other.where.fox"
 				},
 				"2": {
-					"name": "storage.type.cs"
+					"name": "storage.type.fox"
 				},
 				"3": {
-					"name": "punctuation.separator.colon.cs"
+					"name": "punctuation.separator.colon.fox"
 				}
 			},
 			"end": "(?=\\{|where|;)",
 			"patterns": [
 				{
-					"name": "keyword.other.class.cs",
+					"name": "keyword.other.class.fox",
 					"match": "\\bclass\\b"
 				},
 				{
@@ -594,13 +594,13 @@
 					]
 				},
 				"6": {
-					"name": "entity.name.variable.field.cs"
+					"name": "entity.name.variable.field.fox"
 				}
 			},
 			"end": "(?=;)",
 			"patterns": [
 				{
-					"name": "entity.name.variable.field.cs",
+					"name": "entity.name.variable.field.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				},
 				{
@@ -638,7 +638,7 @@
 					]
 				},
 				"8": {
-					"name": "keyword.other.this.cs"
+					"name": "keyword.other.this.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -678,7 +678,7 @@
 					]
 				},
 				"8": {
-					"name": "entity.name.function.cs"
+					"name": "entity.name.function.fox"
 				},
 				"9": {
 					"patterns": [
@@ -715,7 +715,7 @@
 					"match": "\\b([_[:alpha:]][_[:alnum:]]*)\\b",
 					"captures": {
 						"1": {
-							"name": "entity.name.function.cs"
+							"name": "entity.name.function.fox"
 						}
 					}
 				},
@@ -723,7 +723,7 @@
 					"begin": "(:)",
 					"beginCaptures": {
 						"1": {
-							"name": "punctuation.separator.colon.cs"
+							"name": "punctuation.separator.colon.fox"
 						}
 					},
 					"end": "(?=\\{|=>)",
@@ -751,10 +751,10 @@
 			"begin": "\\b(?:(base)|(this))\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.base.cs"
+					"name": "keyword.other.base.fox"
 				},
 				"2": {
-					"name": "keyword.other.this.cs"
+					"name": "keyword.other.this.fox"
 				}
 			},
 			"end": "(?<=\\))",
@@ -775,10 +775,10 @@
 					]
 				},
 				"6": {
-					"name": "keyword.other.operator-decl.cs"
+					"name": "keyword.other.operator-decl.fox"
 				},
 				"7": {
-					"name": "entity.name.function.cs"
+					"name": "entity.name.function.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -806,7 +806,7 @@
 							"match": "\\b(explicit)\\b",
 							"captures": {
 								"1": {
-									"name": "keyword.other.explicit.cs"
+									"name": "keyword.other.explicit.fox"
 								}
 							}
 						},
@@ -814,14 +814,14 @@
 							"match": "\\b(implicit)\\b",
 							"captures": {
 								"1": {
-									"name": "keyword.other.implicit.cs"
+									"name": "keyword.other.implicit.fox"
 								}
 							}
 						}
 					]
 				},
 				"2": {
-					"name": "keyword.other.operator-decl.cs"
+					"name": "keyword.other.operator-decl.fox"
 				},
 				"3": {
 					"patterns": [
@@ -851,13 +851,13 @@
 			"begin": "\\{",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.curlybrace.open.cs"
+					"name": "punctuation.curlybrace.open.fox"
 				}
 			},
 			"end": "\\}",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.curlybrace.close.cs"
+					"name": "punctuation.curlybrace.close.fox"
 				}
 			},
 			"patterns": [
@@ -870,7 +870,7 @@
 			"begin": "(?<!=|!)(=)(?!=|>)",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.operator.assignment.cs"
+					"name": "keyword.operator.assignment.fox"
 				}
 			},
 			"end": "(?=[,\\)\\];}])",
@@ -884,7 +884,7 @@
 			"begin": "(?<!\\.)\\b(goto)\\b",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.goto.cs"
+					"name": "keyword.control.goto.fox"
 				}
 			},
 			"end": "(?=;)",
@@ -893,7 +893,7 @@
 					"begin": "\\b(case)\\b",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.control.case.cs"
+							"name": "keyword.control.case.fox"
 						}
 					},
 					"end": "(?=;)",
@@ -907,12 +907,12 @@
 					"match": "\\b(default)\\b",
 					"captures": {
 						"1": {
-							"name": "keyword.control.default.cs"
+							"name": "keyword.control.default.fox"
 						}
 					}
 				},
 				{
-					"name": "entity.name.label.cs",
+					"name": "entity.name.label.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				}
 			]
@@ -921,7 +921,7 @@
 			"begin": "(?<!\\.)\\b(return)\\b",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.flow.return.cs"
+					"name": "keyword.control.flow.return.fox"
 				}
 			},
 			"end": "(?=;)",
@@ -935,10 +935,10 @@
 			"match": "(?<!\\.)\\b(?:(break)|(continue))\\b",
 			"captures": {
 				"1": {
-					"name": "keyword.control.flow.break.cs"
+					"name": "keyword.control.flow.break.fox"
 				},
 				"2": {
-					"name": "keyword.control.flow.continue.cs"
+					"name": "keyword.control.flow.continue.fox"
 				}
 			}
 		},
@@ -946,7 +946,7 @@
 			"begin": "(?<!\\.)\\b(if)\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.conditional.if.cs"
+					"name": "keyword.control.conditional.if.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -955,13 +955,13 @@
 					"begin": "\\(",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.open.cs"
+							"name": "punctuation.parenthesis.open.fox"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.close.cs"
+							"name": "punctuation.parenthesis.close.fox"
 						}
 					},
 					"patterns": [
@@ -979,7 +979,7 @@
 			"begin": "(?<!\\.)\\b(else)\\b",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.conditional.else.cs"
+					"name": "keyword.control.conditional.else.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -993,7 +993,7 @@
 			"begin": "(?<!\\.)\\b(switch)\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.switch.cs"
+					"name": "keyword.control.switch.fox"
 				}
 			},
 			"end": "(?<=\\})",
@@ -1002,13 +1002,13 @@
 					"begin": "\\(",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.open.cs"
+							"name": "punctuation.parenthesis.open.fox"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.close.cs"
+							"name": "punctuation.parenthesis.close.fox"
 						}
 					},
 					"patterns": [
@@ -1021,13 +1021,13 @@
 					"begin": "\\{",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.open.cs"
+							"name": "punctuation.curlybrace.open.fox"
 						}
 					},
 					"end": "\\}",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.curlybrace.close.cs"
+							"name": "punctuation.curlybrace.close.fox"
 						}
 					},
 					"patterns": [
@@ -1047,13 +1047,13 @@
 					"begin": "(?<!\\.)\\b(case)\\b\\s+",
 					"beginCaptures": {
 						"1": {
-							"name": "keyword.control.case.cs"
+							"name": "keyword.control.case.fox"
 						}
 					},
 					"end": ":",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.separator.colon.cs"
+							"name": "punctuation.separator.colon.fox"
 						}
 					},
 					"patterns": [
@@ -1066,10 +1066,10 @@
 					"match": "(?<!\\.)\\b(default)\\b\\s*(:)",
 					"captures": {
 						"1": {
-							"name": "keyword.control.default.cs"
+							"name": "keyword.control.default.fox"
 						},
 						"2": {
-							"name": "punctuation.separator.colon.cs"
+							"name": "punctuation.separator.colon.fox"
 						}
 					}
 				}
@@ -1079,7 +1079,7 @@
 			"begin": "(?<!\\.)\\b(do)\\b",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.loop.do.cs"
+					"name": "keyword.control.loop.do.fox"
 				}
 			},
 			"end": "(?=;|})",
@@ -1093,7 +1093,7 @@
 			"begin": "(?<!\\.)\\b(while)\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.loop.while.cs"
+					"name": "keyword.control.loop.while.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -1102,13 +1102,13 @@
 					"begin": "\\(",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.open.cs"
+							"name": "punctuation.parenthesis.open.fox"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.close.cs"
+							"name": "punctuation.parenthesis.close.fox"
 						}
 					},
 					"patterns": [
@@ -1126,7 +1126,7 @@
 			"begin": "(?<!\\.)\\b(for)\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.loop.for.cs"
+					"name": "keyword.control.loop.for.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -1135,13 +1135,13 @@
 					"begin": "\\(",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.open.cs"
+							"name": "punctuation.parenthesis.open.fox"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.close.cs"
+							"name": "punctuation.parenthesis.close.fox"
 						}
 					},
 					"patterns": [
@@ -1168,7 +1168,7 @@
 			"begin": "(?<!\\.)\\b(foreach)\\b\\s*(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.control.loop.foreach.cs"
+					"name": "keyword.control.loop.foreach.fox"
 				}
 			},
 			"end": "(?<=\\})|(?=;)",
@@ -1177,13 +1177,13 @@
 					"begin": "\\(",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.open.cs"
+							"name": "punctuation.parenthesis.open.fox"
 						}
 					},
 					"end": "\\)",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.parenthesis.close.cs"
+							"name": "punctuation.parenthesis.close.fox"
 						}
 					},
 					"patterns": [
@@ -1191,7 +1191,7 @@
 							"match": "(?x)\n(?:\n  (\\bvar\\b)|\n  (?<type-name>\n    (?:\n        (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name-and-type-args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n        (?:\\s*\\*\\s*)* # pointer suffix?\n        (?:\\s*\\?\\s*)? # nullable suffix?\n        (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n    )|\n    (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n  )\n)\\s+\n(\\g<identifier>)\\s+\n\\b(in)\\b",
 							"captures": {
 								"1": {
-									"name": "keyword.other.var.cs"
+									"name": "keyword.other.var.fox"
 								},
 								"2": {
 									"patterns": [
@@ -1201,10 +1201,10 @@
 									]
 								},
 								"7": {
-									"name": "entity.name.variable.local.cs"
+									"name": "entity.name.variable.local.fox"
 								},
 								"8": {
-									"name": "keyword.control.loop.in.cs"
+									"name": "keyword.control.loop.in.fox"
 								}
 							}
 						},
@@ -1212,7 +1212,7 @@
 							"match": "(?x) # match foreach (var (x, y) in ...)\n(?:\\b(var)\\b\\s*)?\n(?<tuple>\\((?:[^\\(\\)]|\\g<tuple>)+\\))\\s+\n\\b(in)\\b",
 							"captures": {
 								"1": {
-									"name": "keyword.other.var.cs"
+									"name": "keyword.other.var.fox"
 								},
 								"2": {
 									"patterns": [
@@ -1222,7 +1222,7 @@
 									]
 								},
 								"3": {
-									"name": "keyword.control.loop.in.cs"
+									"name": "keyword.control.loop.in.fox"
 								}
 							}
 						},
@@ -1240,10 +1240,10 @@
 			"match": "([_[:alpha:]][_[:alnum:]]*)\\s*(:)",
 			"captures": {
 				"1": {
-					"name": "entity.name.label.cs"
+					"name": "entity.name.label.fox"
 				},
 				"2": {
-					"name": "punctuation.separator.colon.cs"
+					"name": "punctuation.separator.colon.fox"
 				}
 			}
 		},
@@ -1261,7 +1261,7 @@
 			"begin": "(?x)\n(?:\n  (\\bvar\\b)|\n  (?<type-name>\n    (?:\n        (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name-and-type-args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n        (?:\\s*\\*\\s*)* # pointer suffix?\n        (?:\\s*\\?\\s*)? # nullable suffix?\n        (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n    )|\n    (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n  )\n)\\s+\n(\\g<identifier>)\\s*\n(?=,|;|=|\\))",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.var.cs"
+					"name": "keyword.other.var.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1271,13 +1271,13 @@
 					]
 				},
 				"7": {
-					"name": "entity.name.variable.local.cs"
+					"name": "entity.name.variable.local.fox"
 				}
 			},
 			"end": "(?=;|\\))",
 			"patterns": [
 				{
-					"name": "entity.name.variable.local.cs",
+					"name": "entity.name.variable.local.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				},
 				{
@@ -1295,7 +1295,7 @@
 			"begin": "(?x)\n(?<const-keyword>\\b(?:const)\\b)\\s*\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)\\s+\n(\\g<identifier>)\\s*\n(?=,|;|=)",
 			"beginCaptures": {
 				"1": {
-					"name": "storage.modifier.cs"
+					"name": "storage.modifier.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1305,13 +1305,13 @@
 					]
 				},
 				"7": {
-					"name": "entity.name.variable.local.cs"
+					"name": "entity.name.variable.local.fox"
 				}
 			},
 			"end": "(?=;)",
 			"patterns": [
 				{
-					"name": "entity.name.variable.local.cs",
+					"name": "entity.name.variable.local.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				},
 				{
@@ -1329,7 +1329,7 @@
 			"match": "(?x) # e.g. int x OR var x\n(?:\n  \\b(var)\\b|\n  (?<type-name>\n    (?:\n        (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n        (?<name-and-type-args> # identifier + type arguments (if any)\n          \\g<identifier>\\s*\n          (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n        )\n        (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n        (?:\\s*\\*\\s*)* # pointer suffix?\n        (?:\\s*\\?\\s*)? # nullable suffix?\n        (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n    )|\n    (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n  )\n)\\s+\n\\b(\\g<identifier>)\\b\\s*\n(?=[,)])",
 			"captures": {
 				"1": {
-					"name": "keyword.other.var.cs"
+					"name": "keyword.other.var.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1339,25 +1339,25 @@
 					]
 				},
 				"7": {
-					"name": "entity.name.variable.tuple-element.cs"
+					"name": "entity.name.variable.tuple-element.fox"
 				}
 			}
 		},
 		"interpolated-string": {
-			"name": "string.quoted.double.cs",
+			"name": "string.quoted.double.fox",
 			"begin": "\\$\"",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.string.begin.cs"
+					"name": "punctuation.definition.string.begin.fox"
 				}
 			},
 			"end": "(\")|((?:[^\\\\\\n])$)",
 			"endCaptures": {
 				"1": {
-					"name": "punctuation.definition.string.end.cs"
+					"name": "punctuation.definition.string.end.fox"
 				},
 				"2": {
-					"name": "invalid.illegal.newline.cs"
+					"name": "invalid.illegal.newline.fox"
 				}
 			},
 			"patterns": [
@@ -1370,20 +1370,20 @@
 			]
 		},
 		"interpolation": {
-			"name": "meta.interpolation.cs",
+			"name": "meta.interpolation.fox",
 			"begin": "(?<=[^\\{])((?:\\{\\{)*)(\\{)(?=[^\\{])",
 			"beginCaptures": {
 				"1": {
-					"name": "string.quoted.double.cs"
+					"name": "string.quoted.double.fox"
 				},
 				"2": {
-					"name": "punctuation.definition.interpolation.begin.cs"
+					"name": "punctuation.definition.interpolation.begin.fox"
 				}
 			},
 			"end": "\\}",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.definition.interpolation.end.cs"
+					"name": "punctuation.definition.interpolation.end.fox"
 				}
 			},
 			"patterns": [
@@ -1414,62 +1414,62 @@
 		"boolean-literal": {
 			"patterns": [
 				{
-					"name": "constant.language.boolean.true.cs",
+					"name": "constant.language.boolean.true.fox",
 					"match": "(?<!\\.)\\btrue\\b"
 				},
 				{
-					"name": "constant.language.boolean.false.cs",
+					"name": "constant.language.boolean.false.fox",
 					"match": "(?<!\\.)\\bfalse\\b"
 				}
 			]
 		},
 		"null-literal": {
-			"name": "constant.language.null.cs",
+			"name": "constant.language.null.fox",
 			"match": "(?<!\\.)\\bnull\\b"
 		},
 		"numeric-literal": {
 			"patterns": [
 				{
-					"name": "constant.numeric.hex.cs",
+					"name": "constant.numeric.hex.fox",
 					"match": "\\b0(x|X)[0-9a-fA-F_]+(U|u|L|l|UL|Ul|uL|ul|LU|Lu|lU|lu)?\\b"
 				},
 				{
-					"name": "constant.numeric.binary.cs",
+					"name": "constant.numeric.binary.fox",
 					"match": "\\b0(b|B)[01_]+(U|u|L|l|UL|Ul|uL|ul|LU|Lu|lU|lu)?\\b"
 				},
 				{
-					"name": "constant.numeric.decimal.cs",
+					"name": "constant.numeric.decimal.fox",
 					"match": "\\b([0-9_]+)?\\.[0-9_]+((e|E)[0-9]+)?(F|f|D|d|M|m)?\\b"
 				},
 				{
-					"name": "constant.numeric.decimal.cs",
+					"name": "constant.numeric.decimal.fox",
 					"match": "\\b[0-9_]+(e|E)[0-9_]+(F|f|D|d|M|m)?\\b"
 				},
 				{
-					"name": "constant.numeric.decimal.cs",
+					"name": "constant.numeric.decimal.fox",
 					"match": "\\b[0-9_]+(F|f|D|d|M|m)\\b"
 				},
 				{
-					"name": "constant.numeric.decimal.cs",
+					"name": "constant.numeric.decimal.fox",
 					"match": "\\b[0-9_]+(U|u|L|l|UL|Ul|uL|ul|LU|Lu|lU|lu)?\\b"
 				}
 			]
 		},
 		"char-literal": {
-			"name": "string.quoted.single.cs",
+			"name": "string.quoted.single.fox",
 			"begin": "'",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.char.begin.cs"
+					"name": "punctuation.definition.char.begin.fox"
 				}
 			},
 			"end": "(\\')|((?:[^\\\\\\n])$)",
 			"endCaptures": {
 				"1": {
-					"name": "punctuation.definition.char.end.cs"
+					"name": "punctuation.definition.char.end.fox"
 				},
 				"2": {
-					"name": "invalid.illegal.newline.cs"
+					"name": "invalid.illegal.newline.fox"
 				}
 			},
 			"patterns": [
@@ -1479,20 +1479,20 @@
 			]
 		},
 		"string-literal": {
-			"name": "string.quoted.double.cs",
+			"name": "string.quoted.double.fox",
 			"begin": "(?<!@)\"",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.string.begin.cs"
+					"name": "punctuation.definition.string.begin.fox"
 				}
 			},
 			"end": "(\")|((?:[^\\\\\\n])$)",
 			"endCaptures": {
 				"1": {
-					"name": "punctuation.definition.string.end.cs"
+					"name": "punctuation.definition.string.end.fox"
 				},
 				"2": {
-					"name": "invalid.illegal.newline.cs"
+					"name": "invalid.illegal.newline.fox"
 				}
 			},
 			"patterns": [
@@ -1502,57 +1502,57 @@
 			]
 		},
 		"string-character-escape": {
-			"name": "constant.character.escape.cs",
+			"name": "constant.character.escape.fox",
 			"match": "\\\\."
 		},
 		"expression-operators": {
 			"patterns": [
 				{
-					"name": "keyword.operator.assignment.compound.cs",
+					"name": "keyword.operator.assignment.compound.fox",
 					"match": "\\*=|/=|%=|\\+=|-="
 				},
 				{
-					"name": "keyword.operator.assignment.compound.bitwise.cs",
+					"name": "keyword.operator.assignment.compound.bitwise.fox",
 					"match": "\\&=|\\^=|<<=|>>=|\\|="
 				},
 				{
-					"name": "keyword.operator.bitwise.shift.cs",
+					"name": "keyword.operator.bitwise.shift.fox",
 					"match": "<<|>>"
 				},
 				{
-					"name": "keyword.operator.comparison.cs",
+					"name": "keyword.operator.comparison.fox",
 					"match": "==|!="
 				},
 				{
-					"name": "keyword.operator.relational.cs",
+					"name": "keyword.operator.relational.fox",
 					"match": "<=|>=|<|>"
 				},
 				{
-					"name": "keyword.operator.logical.cs",
+					"name": "keyword.operator.logical.fox",
 					"match": "\\!|&&|\\|\\|"
 				},
 				{
-					"name": "keyword.operator.bitwise.cs",
+					"name": "keyword.operator.bitwise.fox",
 					"match": "\\&|~|\\^|\\|"
 				},
 				{
-					"name": "keyword.operator.assignment.cs",
+					"name": "keyword.operator.assignment.fox",
 					"match": "\\="
 				},
 				{
-					"name": "keyword.operator.decrement.cs",
+					"name": "keyword.operator.decrement.fox",
 					"match": "--"
 				},
 				{
-					"name": "keyword.operator.increment.cs",
+					"name": "keyword.operator.increment.fox",
 					"match": "\\+\\+"
 				},
 				{
-					"name": "keyword.operator.arithmetic.cs",
+					"name": "keyword.operator.arithmetic.fox",
 					"match": "%|\\*|/|-|\\+"
 				},
 				{
-					"name": "keyword.operator.null-coalescing.cs",
+					"name": "keyword.operator.null-coalescing.fox",
 					"match": "\\?\\?"
 				}
 			]
@@ -1561,13 +1561,13 @@
 			"begin": "(?<!\\?)\\?(?!\\?|\\.|\\[)",
 			"beginCaptures": {
 				"0": {
-					"name": "keyword.operator.conditional.question-mark.cs"
+					"name": "keyword.operator.conditional.question-mark.fox"
 				}
 			},
 			"end": ":",
 			"endCaptures": {
 				"0": {
-					"name": "keyword.operator.conditional.colon.cs"
+					"name": "keyword.operator.conditional.colon.fox"
 				}
 			},
 			"patterns": [
@@ -1580,13 +1580,13 @@
 			"begin": "\\(",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.open.cs"
+					"name": "punctuation.parenthesis.open.fox"
 				}
 			},
 			"end": "\\)",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.close.cs"
+					"name": "punctuation.parenthesis.close.fox"
 				}
 			},
 			"patterns": [
@@ -1599,13 +1599,13 @@
 			"begin": "\\{",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.curlybrace.open.cs"
+					"name": "punctuation.curlybrace.open.fox"
 				}
 			},
 			"end": "\\}",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.curlybrace.close.cs"
+					"name": "punctuation.curlybrace.close.fox"
 				}
 			},
 			"patterns": [
@@ -1618,14 +1618,14 @@
 			]
 		},
 		"identifier": {
-			"name": "variable.other.readwrite.cs",
+			"name": "variable.other.readwrite.fox",
 			"match": "[_[:alpha:]][_[:alnum:]]*"
 		},
 		"cast-expression": {
 			"match": "(?x)\n(\\()\\s*\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)\\s*\n(\\))(?=\\s*[_[:alnum:]\\(])",
 			"captures": {
 				"1": {
-					"name": "punctuation.parenthesis.open.cs"
+					"name": "punctuation.parenthesis.open.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1635,7 +1635,7 @@
 					]
 				},
 				"7": {
-					"name": "punctuation.parenthesis.close.cs"
+					"name": "punctuation.parenthesis.close.fox"
 				}
 			}
 		},
@@ -1643,10 +1643,10 @@
 			"match": "\\b(?:(base)|(this))\\b",
 			"captures": {
 				"1": {
-					"name": "keyword.other.base.cs"
+					"name": "keyword.other.base.fox"
 				},
 				"2": {
-					"name": "keyword.other.this.cs"
+					"name": "keyword.other.this.fox"
 				}
 			}
 		},
@@ -1654,13 +1654,13 @@
 			"begin": "(?x)\n(?:(\\?)\\s*)?                                     # preceding null-conditional operator?\n(?:(\\.)\\s*)?                                     # preceding dot?\n([_[:alpha:]][_[:alnum:]]*)\\s*                   # method name\n(?<type-args>\\s*<([^<>]|\\g<type-args>)+>\\s*)?\\s* # type arguments\n(?=\\()                                           # open paren of argument list",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.operator.null-conditional.cs"
+					"name": "keyword.operator.null-conditional.fox"
 				},
 				"2": {
-					"name": "punctuation.accessor.cs"
+					"name": "punctuation.accessor.fox"
 				},
 				"3": {
-					"name": "entity.name.function.cs"
+					"name": "entity.name.function.fox"
 				},
 				"4": {
 					"patterns": [
@@ -1681,16 +1681,16 @@
 			"begin": "(?x)\n(?:(\\?)\\s*)?                        # preceding null-conditional operator?\n(?:(\\.)\\s*)?                        # preceding dot?\n(?:([_[:alpha:]][_[:alnum:]]*)\\s*)? # property name\n(?:(\\?)\\s*)?                        # null-conditional operator?\n(?=\\[)                              # open bracket of argument list",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.operator.null-conditional.cs"
+					"name": "keyword.operator.null-conditional.fox"
 				},
 				"2": {
-					"name": "punctuation.accessor.cs"
+					"name": "punctuation.accessor.fox"
 				},
 				"3": {
-					"name": "variable.other.object.property.cs"
+					"name": "variable.other.object.property.fox"
 				},
 				"4": {
-					"name": "keyword.operator.null-conditional.cs"
+					"name": "keyword.operator.null-conditional.fox"
 				}
 			},
 			"end": "(?<=\\])(?!\\s*\\[)",
@@ -1706,13 +1706,13 @@
 					"match": "(?x)\n(?:(\\?)\\s*)?                   # preceding null-conditional operator?\n(\\.)\\s*                        # preceding dot\n([_[:alpha:]][_[:alnum:]]*)\\s* # property name\n(?![_[:alnum:]]|\\(|(\\?)?\\[|<)  # next character is not alpha-numeric, nor a (, [, or <. Also, test for ?[",
 					"captures": {
 						"1": {
-							"name": "keyword.operator.null-conditional.cs"
+							"name": "keyword.operator.null-conditional.fox"
 						},
 						"2": {
-							"name": "punctuation.accessor.cs"
+							"name": "punctuation.accessor.fox"
 						},
 						"3": {
-							"name": "variable.other.object.property.cs"
+							"name": "variable.other.object.property.fox"
 						}
 					}
 				},
@@ -1720,10 +1720,10 @@
 					"match": "(?x)\n(\\.)?\\s*\n([_[:alpha:]][_[:alnum:]]*)\n(?<type-params>\\s*<([^<>]|\\g<type-params>)+>\\s*)\n(?=\n  (\\s*\\?)?\n  \\s*\\.\\s*[_[:alpha:]][_[:alnum:]]*\n)",
 					"captures": {
 						"1": {
-							"name": "punctuation.accessor.cs"
+							"name": "punctuation.accessor.fox"
 						},
 						"2": {
-							"name": "variable.other.object.cs"
+							"name": "variable.other.object.fox"
 						},
 						"3": {
 							"patterns": [
@@ -1738,7 +1738,7 @@
 					"match": "(?x)\n([_[:alpha:]][_[:alnum:]]*)\n(?=\n  (\\s*\\?)?\n  \\s*\\.\\s*[_[:alpha:]][_[:alnum:]]*\n)",
 					"captures": {
 						"1": {
-							"name": "variable.other.object.cs"
+							"name": "variable.other.object.fox"
 						}
 					}
 				}
@@ -1758,7 +1758,7 @@
 			"begin": "(?x)\n(new)\\s+\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)\\s*\n(?=\\()",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.new.cs"
+					"name": "keyword.other.new.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1779,7 +1779,7 @@
 			"match": "(?x)\n(new)\\s+\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)\\s*\n(?=\\{|$)",
 			"captures": {
 				"1": {
-					"name": "keyword.other.new.cs"
+					"name": "keyword.other.new.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1794,7 +1794,7 @@
 			"begin": "(?x)\n\\b(new)\\b\\s*\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)?\\s*\n(?=\\[)",
 			"beginCaptures": {
 				"1": {
-					"name": "keyword.other.new.cs"
+					"name": "keyword.other.new.fox"
 				},
 				"2": {
 					"patterns": [
@@ -1815,13 +1815,13 @@
 			"begin": "(\\()",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.open.cs"
+					"name": "punctuation.parenthesis.open.fox"
 				}
 			},
 			"end": "(\\))",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.close.cs"
+					"name": "punctuation.parenthesis.close.fox"
 				}
 			},
 			"patterns": [
@@ -1829,14 +1829,14 @@
 					"include": "#comment"
 				},
 				{
-					"name": "storage.modifier.cs",
+					"name": "storage.modifier.fox",
 					"match": "\\b(this)\\b"
 				},
 				{
 					"match": "\\b([_[:alpha:]][_[:alnum:]]*)\\s*(?=[=,)])",
 					"captures": {
 						"1": {
-							"name": "entity.name.variable.parameter.cs"
+							"name": "entity.name.variable.parameter.fox"
 						}
 					}
 				},
@@ -1855,13 +1855,13 @@
 			"begin": "\\[",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.squarebracket.open.cs"
+					"name": "punctuation.squarebracket.open.fox"
 				}
 			},
 			"end": "\\]",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.squarebracket.close.cs"
+					"name": "punctuation.squarebracket.close.fox"
 				}
 			},
 			"patterns": [
@@ -1880,13 +1880,13 @@
 			"begin": "\\(",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.open.cs"
+					"name": "punctuation.parenthesis.open.fox"
 				}
 			},
 			"end": "\\)",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.parenthesis.close.cs"
+					"name": "punctuation.parenthesis.close.fox"
 				}
 			},
 			"patterns": [
@@ -1905,10 +1905,10 @@
 			"begin": "([_[:alpha:]][_[:alnum:]]*)\\s*(:)",
 			"beginCaptures": {
 				"1": {
-					"name": "entity.name.variable.parameter.cs"
+					"name": "entity.name.variable.parameter.fox"
 				},
 				"2": {
-					"name": "punctuation.separator.colon.cs"
+					"name": "punctuation.separator.colon.fox"
 				}
 			},
 			"end": "(?=(,|\\)|\\]))",
@@ -1926,7 +1926,7 @@
 			]
 		},
 		"type": {
-			"name": "meta.type.cs",
+			"name": "meta.type.fox",
 			"patterns": [
 				{
 					"include": "#comment"
@@ -1949,7 +1949,7 @@
 			"match": "\\b(bool|byte|char|decimal|double|float|int|long|object|sbyte|short|string|uint|ulong|ushort|void)\\b",
 			"captures": {
 				"1": {
-					"name": "keyword.type.cs"
+					"name": "keyword.type.fox"
 				}
 			}
 		},
@@ -1959,10 +1959,10 @@
 					"match": "([_[:alpha:]][_[:alnum:]]*)\\s*(\\:\\:)",
 					"captures": {
 						"1": {
-							"name": "entity.name.type.alias.cs"
+							"name": "entity.name.type.alias.fox"
 						},
 						"2": {
-							"name": "punctuation.separator.coloncolon.cs"
+							"name": "punctuation.separator.coloncolon.fox"
 						}
 					}
 				},
@@ -1970,10 +1970,10 @@
 					"match": "([_[:alpha:]][_[:alnum:]]*)\\s*(\\.)",
 					"captures": {
 						"1": {
-							"name": "storage.type.cs"
+							"name": "storage.type.fox"
 						},
 						"2": {
-							"name": "punctuation.accessor.cs"
+							"name": "punctuation.accessor.fox"
 						}
 					}
 				},
@@ -1981,15 +1981,15 @@
 					"match": "(\\.)\\s*([_[:alpha:]][_[:alnum:]]*)",
 					"captures": {
 						"1": {
-							"name": "punctuation.accessor.cs"
+							"name": "punctuation.accessor.fox"
 						},
 						"2": {
-							"name": "storage.type.cs"
+							"name": "storage.type.fox"
 						}
 					}
 				},
 				{
-					"name": "storage.type.cs",
+					"name": "storage.type.fox",
 					"match": "[_[:alpha:]][_[:alnum:]]*"
 				}
 			]
@@ -1998,13 +1998,13 @@
 			"begin": "<",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.definition.typeparameters.begin.cs"
+					"name": "punctuation.definition.typeparameters.begin.fox"
 				}
 			},
 			"end": ">",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.definition.typeparameters.end.cs"
+					"name": "punctuation.definition.typeparameters.end.fox"
 				}
 			},
 			"patterns": [
@@ -2023,13 +2023,13 @@
 			"begin": "\\[",
 			"beginCaptures": {
 				"0": {
-					"name": "punctuation.squarebracket.open.cs"
+					"name": "punctuation.squarebracket.open.fox"
 				}
 			},
 			"end": "\\]",
 			"endCaptures": {
 				"0": {
-					"name": "punctuation.squarebracket.close.cs"
+					"name": "punctuation.squarebracket.close.fox"
 				}
 			},
 			"patterns": [
@@ -2039,35 +2039,35 @@
 			]
 		},
 		"operator-assignment": {
-			"name": "keyword.operator.assignment.cs",
+			"name": "keyword.operator.assignment.fox",
 			"match": "(?<!=|!)(=)(?!=)"
 		},
 		"punctuation-comma": {
-			"name": "punctuation.separator.comma.cs",
+			"name": "punctuation.separator.comma.fox",
 			"match": ","
 		},
 		"punctuation-semicolon": {
-			"name": "punctuation.terminator.statement.cs",
+			"name": "punctuation.terminator.statement.fox",
 			"match": ";"
 		},
 		"punctuation-accessor": {
-			"name": "punctuation.accessor.cs",
+			"name": "punctuation.accessor.fox",
 			"match": "\\."
 		},
 		"comment": {
 			"patterns": [
 				{
-					"name": "comment.block.cs",
+					"name": "comment.block.fox",
 					"begin": "/\\*",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.fox"
 						}
 					},
 					"end": "\\*/",
 					"endCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.fox"
 						}
 					}
 				},
@@ -2075,17 +2075,17 @@
 					"begin": "(^\\s+)?(?=//)",
 					"beginCaptures": {
 						"1": {
-							"name": "punctuation.whitespace.comment.leading.cs"
+							"name": "punctuation.whitespace.comment.leading.fox"
 						}
 					},
 					"end": "(?=$)",
 					"patterns": [
 						{
-							"name": "comment.line.double-slash.cs",
+							"name": "comment.line.double-slash.fox",
 							"begin": "(?<!/)//(?!/)",
 							"beginCaptures": {
 								"0": {
-									"name": "punctuation.definition.comment.cs"
+									"name": "punctuation.definition.comment.fox"
 								}
 							},
 							"end": "(?=$)"
