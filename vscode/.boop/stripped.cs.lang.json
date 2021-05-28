@@ -1008,42 +1008,6 @@
 				}
 			]
 		},
-        "bracketed-argument-list": {
-			"begin": "\\[",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.squarebracket.open.cs"
-				}
-			},
-			"end": "\\]",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.squarebracket.close.cs"
-				}
-			},
-			"patterns": [
-				{
-					"include": "#named-argument"
-				},
-				{
-					"include": "#argument"
-				},
-				{
-					"include": "#punctuation-comma"
-				}
-			]
-		},
-        "argument": {
-			"patterns": [
-				{
-					"name": "storage.modifier.cs",
-					"match": "\\b(ref|out)\\b"
-				},
-				{
-					"include": "#expression"
-				}
-			]
-		},
 		"query-expression": {
 			"begin": "(?x)\n\\b(from)\\b\\s*\n(?<type-name>\n  (?:\n      (?:(?<identifier>[_[:alpha:]][_[:alnum:]]*)\\s*\\:\\:\\s*)? # alias-qualification\n      (?<name-and-type-args> # identifier + type arguments (if any)\n        \\g<identifier>\\s*\n        (?<type-args>\\s*<(?:[^<>]|\\g<type-args>)+>\\s*)?\n      )\n      (?:\\s*\\.\\s*\\g<name-and-type-args>)* # Are there any more names being dotted into?\n      (?:\\s*\\*\\s*)* # pointer suffix?\n      (?:\\s*\\?\\s*)? # nullable suffix?\n      (?:\\s*\\[(?:\\s*,\\s*)*\\]\\s*)* # array suffix?\n  )|\n  (?<tuple>\\s*\\((?:[^\\(\\)]|\\g<tuple>)+\\))\n)?\n\\b(\\g<identifier>)\\b\\s*\n\\b(in)\\b\\s*",
 			"beginCaptures": {

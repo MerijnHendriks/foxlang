@@ -4,11 +4,7 @@
 	"fileTypes": [
 		"cs"
 	],
-	"uuid": "f7de61e2-bdde-4e2a-a139-8221b179584e",
 	"patterns": [
-		{
-			"include": "#preprocessor"
-		},
 		{
 			"include": "#comment"
 		},
@@ -26,13 +22,7 @@
 		"directives": {
 			"patterns": [
 				{
-					"include": "#extern-alias-directive"
-				},
-				{
 					"include": "#using-directive"
-				},
-				{
-					"include": "#attribute-section"
 				},
 				{
 					"include": "#punctuation-semicolon"
@@ -68,9 +58,6 @@
 		"type-declarations": {
 			"patterns": [
 				{
-					"include": "#preprocessor"
-				},
-				{
 					"include": "#comment"
 				},
 				{
@@ -80,19 +67,10 @@
 					"include": "#class-declaration"
 				},
 				{
-					"include": "#delegate-declaration"
-				},
-				{
 					"include": "#enum-declaration"
 				},
 				{
 					"include": "#interface-declaration"
-				},
-				{
-					"include": "#struct-declaration"
-				},
-				{
-					"include": "#attribute-section"
 				},
 				{
 					"include": "#punctuation-semicolon"
@@ -101,9 +79,6 @@
 		},
 		"class-or-struct-members": {
 			"patterns": [
-				{
-					"include": "#preprocessor"
-				},
 				{
 					"include": "#comment"
 				},
@@ -117,12 +92,6 @@
 					"include": "#field-declaration"
 				},
 				{
-					"include": "#event-declaration"
-				},
-				{
-					"include": "#property-declaration"
-				},
-				{
 					"include": "#indexer-declaration"
 				},
 				{
@@ -130,9 +99,6 @@
 				},
 				{
 					"include": "#constructor-declaration"
-				},
-				{
-					"include": "#destructor-declaration"
 				},
 				{
 					"include": "#operator-declaration"
@@ -144,9 +110,6 @@
 					"include": "#method-declaration"
 				},
 				{
-					"include": "#attribute-section"
-				},
-				{
 					"include": "#punctuation-semicolon"
 				}
 			]
@@ -154,25 +117,13 @@
 		"interface-members": {
 			"patterns": [
 				{
-					"include": "#preprocessor"
-				},
-				{
 					"include": "#comment"
-				},
-				{
-					"include": "#event-declaration"
-				},
-				{
-					"include": "#property-declaration"
 				},
 				{
 					"include": "#indexer-declaration"
 				},
 				{
 					"include": "#method-declaration"
-				},
-				{
-					"include": "#attribute-section"
 				},
 				{
 					"include": "#punctuation-semicolon"
@@ -218,24 +169,6 @@
 					"include": "#break-or-continue-statement"
 				},
 				{
-					"include": "#throw-statement"
-				},
-				{
-					"include": "#yield-statement"
-				},
-				{
-					"include": "#try-statement"
-				},
-				{
-					"include": "#checked-unchecked-statement"
-				},
-				{
-					"include": "#lock-statement"
-				},
-				{
-					"include": "#using-statement"
-				},
-				{
 					"include": "#labeled-statement"
 				},
 				{
@@ -255,25 +188,10 @@
 		"expression": {
 			"patterns": [
 				{
-					"include": "#preprocessor"
-				},
-				{
 					"include": "#comment"
 				},
 				{
-					"include": "#checked-unchecked-expression"
-				},
-				{
-					"include": "#typeof-or-default-expression"
-				},
-				{
-					"include": "#nameof-expression"
-				},
-				{
 					"include": "#interpolated-string"
-				},
-				{
-					"include": "#verbatim-interpolated-string"
 				},
 				{
 					"include": "#this-or-base-expression"
@@ -283,21 +201,6 @@
 				},
 				{
 					"include": "#expression-operators"
-				},
-				{
-					"include": "#await-expression"
-				},
-				{
-					"include": "#query-expression"
-				},
-				{
-					"include": "#as-expression"
-				},
-				{
-					"include": "#is-expression"
-				},
-				{
-					"include": "#anonymous-method-expression"
 				},
 				{
 					"include": "#object-creation-expression"
@@ -327,9 +230,6 @@
 					"include": "#parenthesized-expression"
 				},
 				{
-					"include": "#tuple-deconstruction-assignment"
-				},
-				{
 					"include": "#initializer-expression"
 				},
 				{
@@ -338,70 +238,26 @@
 			]
 		},
 		"using-directive": {
-			"patterns": [
-				{
-					"begin": "\\b(using)\\b\\s+(static)\\s+",
-					"beginCaptures": {
-						"1": {
-							"name": "keyword.other.using.cs"
-						},
-						"2": {
-							"name": "keyword.other.static.cs"
-						}
-					},
-					"end": "(?=;)",
-					"patterns": [
-						{
-							"include": "#type"
-						}
-					]
-				},
-				{
-					"begin": "\\b(using)\\s+(?=([_[:alpha:]][_[:alnum:]]*)\\s*=)",
-					"beginCaptures": {
-						"1": {
-							"name": "keyword.other.using.cs"
-						},
-						"2": {
-							"name": "entity.name.type.alias.cs"
-						}
-					},
-					"end": "(?=;)",
-					"patterns": [
-						{
-							"include": "#comment"
-						},
-						{
-							"include": "#type"
-						},
-						{
-							"include": "#operator-assignment"
-						}
-					]
-				},
-				{
-					"begin": "\\b(using)\\s*",
-					"beginCaptures": {
-						"1": {
-							"name": "keyword.other.using.cs"
-						}
-					},
-					"end": "(?=;)",
-					"patterns": [
-						{
-							"include": "#comment"
-						},
-						{
-							"name": "entity.name.type.namespace.cs",
-							"match": "[_[:alpha:]][_[:alnum:]]*"
-						},
-						{
-							"include": "#operator-assignment"
-						}
-					]
-				}
-			]
-		},
+            "begin": "\\b(using)\\s*",
+            "beginCaptures": {
+                "1": {
+                    "name": "keyword.other.using.cs"
+                }
+            },
+            "end": "(?=;)",
+            "patterns": [
+                {
+                    "include": "#comment"
+                },
+                {
+                    "name": "entity.name.type.namespace.cs",
+                    "match": "[_[:alpha:]][_[:alnum:]]*"
+                },
+                {
+                    "include": "#operator-assignment"
+                }
+            ]
+        },
 		"namespace-declaration": {
 			"begin": "\\b(namespace)\\s+",
 			"beginCaptures": {
@@ -450,7 +306,7 @@
 		},
 		"storage-modifier": {
 			"name": "storage.modifier.cs",
-			"match": "(?<!\\.)\\b(new|public|protected|internal|private|abstract|virtual|override|sealed|static|partial|readonly|volatile|const|extern|async|unsafe)\\b"
+			"match": "(?<!\\.)\\b(new|delete|static|const)\\b"
 		},
 		"class-declaration": {
 			"begin": "(?=\\bclass\\b)",
@@ -500,9 +356,6 @@
 							"include": "#class-or-struct-members"
 						}
 					]
-				},
-				{
-					"include": "#preprocessor"
 				},
 				{
 					"include": "#comment"
@@ -562,13 +415,7 @@
 					},
 					"patterns": [
 						{
-							"include": "#preprocessor"
-						},
-						{
 							"include": "#comment"
-						},
-						{
-							"include": "#attribute-section"
 						},
 						{
 							"include": "#punctuation-comma"
@@ -591,9 +438,6 @@
 							]
 						}
 					]
-				},
-				{
-					"include": "#preprocessor"
 				},
 				{
 					"include": "#comment"
@@ -650,9 +494,6 @@
 					]
 				},
 				{
-					"include": "#preprocessor"
-				},
-				{
 					"include": "#comment"
 				}
 			]
@@ -692,9 +533,6 @@
 				},
 				{
 					"include": "#punctuation-comma"
-				},
-				{
-					"include": "#attribute-section"
 				}
 			]
 		},
@@ -712,9 +550,6 @@
 				},
 				{
 					"include": "#punctuation-comma"
-				},
-				{
-					"include": "#preprocessor"
 				}
 			]
 		},
@@ -736,24 +571,6 @@
 				{
 					"name": "keyword.other.class.cs",
 					"match": "\\bclass\\b"
-				},
-				{
-					"name": "keyword.other.struct.cs",
-					"match": "\\bstruct\\b"
-				},
-				{
-					"match": "(new)\\s*(\\()\\s*(\\))",
-					"captures": {
-						"1": {
-							"name": "keyword.other.new.cs"
-						},
-						"2": {
-							"name": "punctuation.parenthesis.open.cs"
-						},
-						"3": {
-							"name": "punctuation.parenthesis.close.cs"
-						}
-					}
 				},
 				{
 					"include": "#type"
@@ -831,11 +648,8 @@
 				},
 				{
 					"include": "#bracketed-parameter-list"
-				},
-				{
-					"include": "#property-accessors"
-				},
-				{
+                },
+                {
 					"include": "#expression-body"
 				},
 				{
@@ -921,9 +735,6 @@
 				},
 				{
 					"include": "#parenthesized-parameter-list"
-				},
-				{
-					"include": "#preprocessor"
 				},
 				{
 					"include": "#comment"
@@ -1443,9 +1254,6 @@
 				},
 				{
 					"include": "#local-variable-declaration"
-				},
-				{
-					"include": "#local-tuple-var-deconstruction"
 				}
 			]
 		},
@@ -1600,12 +1408,6 @@
 				},
 				{
 					"include": "#string-literal"
-				},
-				{
-					"include": "#verbatim-string-literal"
-				},
-				{
-					"include": "#tuple-literal"
 				}
 			]
 		},
@@ -2027,11 +1829,8 @@
 					"include": "#comment"
 				},
 				{
-					"include": "#attribute-section"
-				},
-				{
 					"name": "storage.modifier.cs",
-					"match": "\\b(ref|params|out|this)\\b"
+					"match": "\\b(this)\\b"
 				},
 				{
 					"match": "\\b([_[:alpha:]][_[:alnum:]]*)\\s*(?=[=,)])",
@@ -2046,6 +1845,31 @@
 				},
 				{
 					"include": "#type"
+				},
+				{
+					"include": "#punctuation-comma"
+				}
+			]
+        },
+        "bracketed-argument-list": {
+			"begin": "\\[",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.squarebracket.open.cs"
+				}
+			},
+			"end": "\\]",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.squarebracket.close.cs"
+				}
+			},
+			"patterns": [
+				{
+					"include": "#named-argument"
+				},
+				{
+					"include": "#argument"
 				},
 				{
 					"include": "#punctuation-comma"
@@ -2093,15 +1917,19 @@
 					"include": "#expression"
 				}
 			]
+        },
+        "argument": {
+			"patterns": [
+				{
+					"include": "#expression"
+				}
+			]
 		},
 		"type": {
 			"name": "meta.type.cs",
 			"patterns": [
 				{
 					"include": "#comment"
-				},
-				{
-					"include": "#tuple-type"
 				},
 				{
 					"include": "#type-builtin"
@@ -2114,9 +1942,6 @@
 				},
 				{
 					"include": "#type-array-suffix"
-				},
-				{
-					"include": "#type-nullable-suffix"
 				}
 			]
 		},
@@ -2255,21 +2080,6 @@
 					},
 					"end": "(?=$)",
 					"patterns": [
-						{
-							"name": "comment.block.documentation.cs",
-							"begin": "(?<!/)///(?!/)",
-							"beginCaptures": {
-								"0": {
-									"name": "punctuation.definition.comment.cs"
-								}
-							},
-							"end": "(?=$)",
-							"patterns": [
-								{
-									"include": "#xml-doc-comment"
-								}
-							]
-						},
 						{
 							"name": "comment.line.double-slash.cs",
 							"begin": "(?<!/)//(?!/)",
